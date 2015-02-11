@@ -32,4 +32,6 @@ do next. For example, "b" will move all `B*` cards to `TODO` and all others to
 
 ### Executing
 
+```sh
 ruby bin/trello-workout.rb c
+```
