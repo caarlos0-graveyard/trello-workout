@@ -22,7 +22,7 @@ Trello.configure do |config|
 end
 
 board_name = ENV["BOARD_NAME"] || "Workout"
-weighing_card_name = ENV["WEIGHING"] || "Weighing"
+weighing_card_name = ENV["WEIGHING_NAME"] || "Weighing"
 todo_list_name = ENV["TODO_LIST_NAME"] || "TODO"
 done_list_name = ENV["DONE_LIST_NAME"] || "Done"
 next_series = ARGV[0] || "A"
