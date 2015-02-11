@@ -28,3 +28,8 @@ You can put all environment variables in a `.env` file.
 - `series` (a, b, c, d, whatever): the `starts_with` of the series you want to
 do next. For example, "b" will move all `B*` cards to `TODO` and all others to
 `Done` (except `Weighing`).
+
+
+### Executing
+
+ruby bin/trello-workout.rb c
