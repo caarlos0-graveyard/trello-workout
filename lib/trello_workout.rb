@@ -11,13 +11,19 @@ class TrelloWorkout
   end
 
   def setup(series)
-    puts "Moving all cards to Done..."
+    puts "\nMoving all cards to Done..."
     @todo.cards.each do |card|
-      card.move_to_list(@done) unless card.name.eql? @weighing_card_name
+      unless card.name.eql? @weighing_card_name
+        puts " ---> Moving '#{card.name}' to '#{@done.name}'..."
+        card.move_to_list(@done)
+      end
     end
-    puts "Moving all cards from series #{series} to TODO..."
+    puts "\nMoving all cards from series #{series} to TODO..."
     @done.cards.each do |card|
-      card.move_to_list(@todo) if card.name.starts_with?(series)
+      if card.name.starts_with?(series)
+        puts " ---> Moving '#{card.name}' to '#{@todo.name}'..."
+        card.move_to_list(@todo)
+      end
     end
   end
 

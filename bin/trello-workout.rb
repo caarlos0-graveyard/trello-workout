@@ -2,6 +2,8 @@
 require "dotenv"
 require_relative "../lib/trello_workout"
 
+puts "Warming up..."
+
 Dotenv.load
 
 unless ENV["TRELLO_API_KEY"]
@@ -34,3 +36,4 @@ TrelloWorkout.new(
   todo_list_name,
   done_list_name
 ).setup next_series.upcase
+puts "\nDone!"
